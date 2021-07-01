@@ -1,0 +1,299 @@
+* { /* Para todos los elementos dentro del archivo o la pagina*/
+    box-sizing: border-box; /* Para que se ocupe el espaciado externo e interno*/
+    margin: 0; /*Para que no haya margenes exteriores*/
+    padding: 0%; /* Para que no haya margenes interiores*/
+}
+
+body { /*Para el body del html*/
+    background-color: black; /* Color de fondo*/
+    color: white;
+    background-color: #17121f;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%238e1d34' fill-opacity='0.2' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+
+a { /*Para las etiquetas a de html*/
+    color: white;
+    text-decoration: none; /* Para que el enlace no tenga el subrayado*/
+}
+
+ul {
+    list-style: none;
+}
+
+.container { /* Para la clase container*/
+    width: 90%; /*ocupe el 90% del espacio*/
+    margin: auto; /*margen automatico, centrado*/
+}
+
+/*Estilo de la navegacion*/
+.nav-main {
+    font-size: 17px;
+    display: flex; /*Organizar elemntos*/
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /*Altura de la navegacion*/
+    padding: 20px 0; 
+}
+
+.nav-brand {
+    width: 50px;
+}
+
+/*Navegacion izquierda*/
+.nav-main ul{
+    display: flex;
+}
+
+.nav-main ul li {
+    padding: 10px;
+}
+
+.nav-main ul li a { /*Espacio entre la linea de abajo y el menu*/
+    padding: 3px;
+}
+
+.nav-main ul li a:hover { /*Linea debajo del menu en el posicionamiento del cursor*/
+    border-bottom: 2px solid white;
+}
+
+.nav-main ul.nav-menu { /*Pegar el menu de navegacion a la imagen de logo*/
+    flex: 1;
+    margin-left: 20px; /*Un espaciado*/
+}
+
+/*Boton manipulado con javascript para que tenga un efecto click (boton tres rayas)*/
+.menu-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    display: none;
+    z-index: 2;
+}
+
+/*Showcase*/
+hr {
+    margin: 10px 0px 50px 0px;
+}
+
+.showcase {
+    width: 100;
+    height: 550px;
+    background: url(https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center/cover;
+    padding: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;/*el primer numero de pixeles es para arriba y abajo y el segundo para los lados*/
+    background: #262626;
+    color: white;
+    font-size: 15px;
+    border: 1px solid white;
+    margin: 10px 0;
+}
+
+.btn:hover { /*el hover es una pseudo clase de estilos para botones*/
+    opacity: .8; /*mientras menor sea el numero mas opaco se hace el boton*/
+}
+
+.showcase h2,
+.showcase p {
+    margin-bottom: 10px;
+}
+
+/* cartas de noticias*/
+.news-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.news-cards img {
+    width: 100%;
+    height: 210px;
+}
+
+.news-cards h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.news-cards a {
+    padding: 10px 0;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.news-cards a:hover {
+    text-decoration: underline;
+}
+
+/* cartas de banners 1*/
+.cards-banner-one {
+    width: 100%;
+    height: 350px;
+    background: url(https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center/cover;
+    margin-bottom: 40px;
+}
+
+.cards-banner-one .content {
+    width: 40%;
+    padding: 90px 0px 0px 30px; /*arriba abajo derecha izquierda*/
+    color: white;
+}
+
+.cards-banner-one p,
+.cards-banner-one h2 {
+    margin: 10px 0 20px 0;
+}
+
+/* Segundo banner*/
+.cards-banner-two {
+    width: 100%;
+    height: 350px;
+    margin-top: 20px;
+    background: url(https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center center/cover;
+}
+
+.cards-banner-two .content {
+    width: 50%;
+    padding: 100px 0px 0px 30px; /*arriba abajo derecha izquierda*/
+    color: white;
+}
+
+/*Redes sociales*/
+.social {
+    margin: 50px;
+}
+
+.social p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a {
+    margin: 0 30px;
+}
+
+.links a i {
+    font-size: 2rem;
+}
+ 
+/*Fooder links*/
+
+.footer-links {
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* forma las columnas*/
+    gap: 10px; /* Espaciado entre las columnas*/
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-container ul {
+    margin: 0 auto;
+}
+
+.footer-container ul li {
+    line-height: 2.4;
+}
+
+/* footer copyright*/
+.footer {
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Modificaciones para varias plataformas segun las condiciones de las media querys*/
+@media (max-width: 700px) { /*media querys (tamaño menor a 700px)*/
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-main ul.nav-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #2f3640;
+        height: 100%;
+        transform: translateX(-400px);
+        padding: 30px;
+        opacity: .8;
+        transition: transform .5s ease-in-out; /*animacion de apertura del menu*/
+    }
+
+    .nav-main ul.nav-menu.show {
+        transform: translateX(-20px);
+    }
+ 
+    .nav-main ul.nav-menu li {
+        padding: 20px;
+        font-size: 14xp;
+    }
+
+    .nav-main ul.nav-menu-right {
+        margin-right: 35px;
+    }
+    
+    .news-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cards-banner-one .content,
+    .cards-banner-two .content {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .news-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .news-cards img {
+        height: 260px;
+    }
+
+    .cards-banner-one .content,
+    .cards-banner-two .content {
+        width: 100%;
+        padding: 60px 20px;
+
+    }
+
+    .footer-links .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
